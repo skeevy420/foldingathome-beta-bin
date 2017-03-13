@@ -1,0 +1,11 @@
+[Unit]
+Description=Folding@home Beta distributed computing client
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/fah-beta
+ExecStart=/opt/fah-beta/FAHClient --config /opt/fah-beta/config.xml --exec-directory=/opt/fah-beta --data-directory=/opt/fah-beta
+
+[Install]
+WantedBy=multi-user.target
